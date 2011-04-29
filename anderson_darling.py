@@ -320,7 +320,7 @@ def anderson_darling_exponential(data, theta=None):
     else:
         fix_theta = True
 
-    A2 = anderson_darling_statistic(data, lambda d: 1-np.exp(-theta*x))
+    A2 = anderson_darling_statistic(data, lambda x: 1-np.exp(-theta*x))
 
     if fix_theta:
         th = _adexp_unfixed_thresholds
